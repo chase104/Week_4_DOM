@@ -1,13 +1,10 @@
 const header = document.querySelector('header');
 const nameInput = document.getElementById('name');
 const emailInput = document.getElementById('email');
-
-
-console.log("hello");
+const peopleList = document.getElementById('people-list')
 
 let hideButton = document.getElementById('hideHeaderButton');
 
-console.log(hideButton);
 // change styles because I want to
 // hideButton.style.fontSize = "40px";
 
@@ -37,6 +34,28 @@ const signupForm = document.getElementById("signup-form")
 signupForm.addEventListener("submit", (e) => {
     e.preventDefault();
     console.log("the form is submitting");
+    
+    
+    // make an empty div
+    // put name in that div
+    const nameDiv = document.createElement('div');
+    nameDiv.textContent = nameInput.value;
+    // no home :(
+
+    // make another empty div
+    // put email in that div
+    const emailDiv = document.createElement('div');
+    emailDiv.textContent = emailInput.value;
+    // no home :(
+    // make an empty li 
+    // put 2 divs in the li
+    const personLi = document.createElement('li');
+    personLi.appendChild(nameDiv);
+    personLi.appendChild(emailDiv);
+    console.log(personLi);
+    // NO HOME! :(
+    // put that li into the ul
+    peopleList.appendChild(personLi)
 })
 
 const resetButton = document.getElementById('reset-button')
