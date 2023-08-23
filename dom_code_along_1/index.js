@@ -56,6 +56,8 @@ signupForm.addEventListener("submit", (e) => {
     // NO HOME! :(
     // put that li into the ul
     peopleList.appendChild(personLi)
+
+    
 })
 
 const resetButton = document.getElementById('reset-button')
