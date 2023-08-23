@@ -1,4 +1,7 @@
-let header = document.querySelector('header');
+const header = document.querySelector('header');
+const nameInput = document.getElementById('name');
+const emailInput = document.getElementById('email');
+
 
 console.log("hello");
 
@@ -25,4 +28,22 @@ let showButton = document.getElementById("showHeaderButton");
 
 showButton.addEventListener('click', () => {
     header.classList.remove('hide');
+})
+
+
+const signupForm = document.getElementById("signup-form")
+
+
+signupForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    console.log("the form is submitting");
+})
+
+const resetButton = document.getElementById('reset-button')
+console.log(resetButton);
+
+resetButton.addEventListener('click', ()=>{
+    console.log(nameInput.value);
+    nameInput.value = ""
+    emailInput.value = ""
 })
